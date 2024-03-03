@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import axios from 'axios';
-import Link from 'next/link';
-import Todo from '../../../../components/Todo';
-import { TodoType } from '../../../../types/Todo';
-import { BallTriangle } from 'react-loader-spinner'
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
+import Link from "next/link";
+import Todo from "../../../../components/Todo";
+import { TodoType } from "../../../../types/Todo";
+import { BallTriangle } from "react-loader-spinner";
 
 const TodoDetail = () => {
   const router = useRouter();
@@ -39,7 +39,7 @@ const TodoDetail = () => {
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
-          />
+        />
       </div>
     );
   }
@@ -50,6 +50,12 @@ const TodoDetail = () => {
         <label className="block text-xl font-bold text-gray-700">Todo</label>
         <Todo todo={todo} />
         <div className="flex justify-end">
+          <Link
+            href={`${id}/edit`}
+            className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none mr-12"
+          >
+            Edit
+          </Link>
           <Link
             href="/"
             className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none"
