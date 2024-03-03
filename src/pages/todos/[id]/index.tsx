@@ -5,6 +5,7 @@ import Link from "next/link";
 import Todo from "../../../../components/Todo";
 import { TodoType } from "../../../../types/Todo";
 import { BallTriangle } from "react-loader-spinner";
+import DeleteTodoButton from "../../../../components/DeleteTodoButton";
 
 const TodoDetail = () => {
   const router = useRouter();
@@ -63,6 +64,7 @@ const TodoDetail = () => {
             Back
           </Link>
         </div>
+        <DeleteTodoButton id={todo.id} />
       </div>
     </div>
   );
